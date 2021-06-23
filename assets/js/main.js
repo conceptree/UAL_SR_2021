@@ -177,4 +177,12 @@
     })
   });
 
+  /// VIDEOS
+  document.querySelectorAll("button").forEach(btn => {
+    btn.addEventListener("click", (evt)=>{
+      evt.target.parentElement.previousElementSibling.src = evt.target.getAttribute("video-src");
+      evt.target.parentElement.previousElementSibling.load();
+    });
+  });
+
 })()

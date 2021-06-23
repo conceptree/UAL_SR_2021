@@ -789,6 +789,20 @@ section {
   width: 100%;
 }
 
+.advanced-features .advanced-feature-img-left .toggles{
+  display:flex;
+  justify-content: center;
+}
+
+.advanced-features .advanced-feature-img-left .toggles>button{
+  margin: 10px;
+}
+
+.btn-primary{
+  background-color: #1d95cd;
+  border-color: #1d95cd;
+}
+
 @media (max-width: 768px) {
   .advanced-features .advanced-feature-img-right, #advanced-features .advanced-feature-img-left {
     max-width: 50%;
