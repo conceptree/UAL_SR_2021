@@ -24,8 +24,9 @@
 <body>
   <header id="header" class="fixed-top d-flex align-items-center header-transparent">
     <div class="container d-flex justify-content-between align-items-center">
-      <div id="logo">
-        <h1><a href="index.html">UR5 & Standford</a></h1>
+      <div id="logo" style="display:flex; align-items: center; justify-content: space-between;">
+        <img src="./assets/img/ual.png" width="50px"/>
+        <h1 style="margin-left: 10px;"><a href="index.html">UR5 & Standford</a></h1>
       </div>
       <nav id="navbar" class="navbar">
         <ul>
@@ -44,7 +45,7 @@
   <section id="hero">
     <div class="hero-text" data-aos="zoom-out">
       <h2>Sistemas de Róbotica 2021 UAL</h2>
-      <p>UR5 foi o robot utilizado neste trabalho.</p>
+      <p>UR5 & Standford</p>
       <a href="#about" class="btn-get-started scrollto">INICIAR</a>
     </div>
     <div class="product-screens">
@@ -186,7 +187,7 @@
               flexibilidade máxima. O UR5 foi projetado para uma integração perfeita em uma ampla variedade de
               aplicações.</p>
 
-              <img src="./assets/img/ur5DHValues.png" alt="" width="35%">
+            <img src="./assets/img/ur5DHValues.png" alt="" width="35%">
           </div>
         </div>
       </div>
@@ -210,19 +211,23 @@
               </div>
               <div>
                 <h2>UR5 - Parâmetros Denavit–Hartenberg e SerialLink</h2>
-                
-                <p>Aqui iremos demonstrar como podemos "montar" o nosso próprio manipulador UR5,  através da junção de elos dos mesmos, utilizando 
+
+                <p>Aqui iremos demonstrar como podemos "montar" o nosso próprio manipulador UR5, através da junção de
+                  elos dos mesmos, utilizando
                   os parâmetros da tabela DH supra mencionada.</p>
 
-                <p>Tendo o nosso manipulador 6 graus de liberdade , teremos que criar 6 links, utilizando o método Link().
-                  Posteriormente, fazemos a junção de todos os links invocando o método SerialLink(L), como podemos averiguar no video demonstrativo.
+                <p>Tendo o nosso manipulador 6 graus de liberdade , teremos que criar 6 links, utilizando o método
+                  Link().
+                  Posteriormente, fazemos a junção de todos os links invocando o método SerialLink(L), como podemos
+                  averiguar no video demonstrativo.
                 </p>
 
                 <p>Utilizando mdl_ur5 fazemos o loading automático do modelo ur5, proveniente da toolbox do PeterCork,
-                  por sua vêz, confirmamos o sucesso da criação do SerialLink, comparando as tabelas DH de ambos - sendo estas iguas.</p>
-              
+                  por sua vêz, confirmamos o sucesso da criação do SerialLink, comparando as tabelas DH de ambos - sendo
+                  estas iguas.</p>
+
                 <p>Clicando em "plot", vemos uma virtualização do robôt na posição inicial</p>
-                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -244,14 +249,18 @@
               <div>
                 <h2>UR5 - Estudo do Movimento</h2>
 
-                <p>O estudo do movimento representa uma experiência de automatizar um movimento com o nosso manipulador robótico.</p>
+                <p>O estudo do movimento representa uma experiência de automatizar um movimento com o nosso manipulador
+                  robótico.</p>
 
-                <p>Para tal, precisamos criar um vetor tempo t = [0:.070:2]', definindo o término do movimento após 2 segundos, com um intervalo
+                <p>Para tal, precisamos criar um vetor tempo t = [0:.070:2]', definindo o término do movimento após 2
+                  segundos, com um intervalo
                   de amostragem de 70ms.
-                  Computamos a trajetória espaciam com q = jtraj(qz, qr, t), com qz a representar a posição inicial e qr a posição 'READY'.
+                  Computamos a trajetória espaciam com q = jtraj(qz, qr, t), com qz a representar a posição inicial e qr
+                  a posição 'READY'.
                 </p>
 
-                <p>Por fim, o plot dinâmico, guardando o video em formato mp4 com plot(ur5, q, 'movie, 'ur5MoviePlot.mp4')</p>
+                <p>Por fim, o plot dinâmico, guardando o video em formato mp4 com plot(ur5, q, 'movie,
+                  'ur5MoviePlot.mp4')</p>
               </div>
             </div>
           </div>
@@ -273,11 +282,15 @@
               </div>
               <div>
                 <h2>UR5 - Cinemática Direta</h2>
-                <p> A cinemática direta, permite-nos perceber o end-factor de um manipulador, ou seja, a sua posição final, dada uma posição incial.
-                  Para tal utilizamos o médifo fkine(), tal como podemos averiguar no exemplo. Neste caso, procurámos
-                  comprender, dada várias posições iniciais, o comportamento do manipulador, e a diferença de posições finais.</p>
-                <p>Respetivamente: RobUr5.fkine([0 0 0 0 0 0]), Rob.fkine([pi pi 0 0 0 0]) (aqui os valores não alteraram substâncialmente, dada a relação
-                  entre 0 e pi, e RobUrk.fkine([pi/4 pi/4 0 0 0 0]). Podemos ver no plot, a diferença dos end effectors, entre o primeiro e o ultimo RobUr5.Fkine().</p>
+                <p> A cinemática direta, permite-nos perceber o end-factor de um manipulador, ou seja, a sua posição
+                  final, dada uma posição incial.
+                  Para tal utilizamos o método fkine(), tal como podemos averiguar no exemplo. Neste caso, procurámos
+                  comprender, dada várias posições iniciais, o comportamento do manipulador, e a diferença de posições
+                  finais.</p>
+                <p>Respetivamente: RobUr5.fkine([0 0 0 0 0 0]), Rob.fkine([pi pi 0 0 0 0]) (aqui os valores não
+                  alteraram substâncialmente, dada a relação
+                  entre 0 e pi, e RobUrk.fkine([pi/4 pi/4 0 0 0 0]). Podemos ver no plot, a diferença dos end effectors,
+                  entre o primeiro e o ultimo RobUr5.Fkine().</p>
               </div>
             </div>
           </div>
@@ -300,8 +313,10 @@
               <div>
                 <h2>UR5 - Cinemática Inversa</h2>
 
-                <p>A cinemática inversa permite, dada a posição do end effector, encontrar a posição inicial e a velocidade de transladação. Dado isto, 
-                  decidimos aplicar o exemplo dado em aula e manipular o nosso robôt de forma a encontrar uma dada bola. Para tal, usámos:</p>
+                <p>A cinemática inversa permite, dada a posição do end effector, encontrar a posição inicial e a
+                  velocidade de transladação. Dado isto,
+                  decidimos aplicar o exemplo dado em aula e manipular o nosso robôt de forma a encontrar uma dada bola.
+                  Para tal, usámos:</p>
 
                 <p>p = [0.8 0 0]; ->% posição alvo no espaço da tarefa ([x y z]);
                   T = transl(p) * troty(pi/2); -> Matriz de transforção
@@ -330,7 +345,7 @@
               O braço de Stanford é um manipulador serial cuja cadeia cinemática consiste em duas juntas de revolução na
               base, uma junta prismática e uma junta esférica</p>
 
-              <img src="assets/img/stanfDHValues.png" alt width="35%">
+            <img src="assets/img/stanfDHValues.png" alt width="35%">
           </div>
         </div>
       </div>
@@ -353,11 +368,14 @@
               </div>
               <div>
                 <h2>Stanford - Parâmetros Denavit–Hartenberg e SerialLink</h2>
-                
-                <p>Uma vez mais criamos os elos do manipulador robótico de stanford, passando como parâmetros os respectivos valores
-                  de Denavit-Hartenberg utilizando o método Link() e posteriormente SerialLink, criando assim a ligação entre todos os elos
+
+                <p>Uma vez mais criamos os elos do manipulador robótico de stanford, passando como parâmetros os
+                  respectivos valores
+                  de Denavit-Hartenberg utilizando o método Link() e posteriormente SerialLink, criando assim a ligação
+                  entre todos os elos
                   do manipulador.</p>
-                <p>Para confirmar que foi bem sucedido, carregámos o modelo de stanford, próprio da toolbox do Peter Corke, utilizando o código mdl_stanford. Este denominado
+                <p>Para confirmar que foi bem sucedido, carregámos o modelo de stanford, próprio da toolbox do Peter
+                  Corke, utilizando o código mdl_stanford. Este denominado
                   por stanf no exemplo no video "matlab".</p>
               </div>
             </div>
